@@ -20,18 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   );
 });
-function toggleAnswer(element) {
-  const answer = element.nextElementSibling;
-  const buttonImg = element.querySelector(".toggle-button img"); 
+  
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("flipped");
+  });
+});
 
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-    buttonImg.src = "/img/faq/arrow.png"; 
-  } else {
-    answer.style.display = "none";
-    buttonImg.src = "/img/faq/icon.png"; 
-  }
-}
 
 
 document.addEventListener("DOMContentLoaded", function () {
